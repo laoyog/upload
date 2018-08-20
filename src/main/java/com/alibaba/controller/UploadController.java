@@ -34,6 +34,8 @@ public class UploadController {
     @Value("${prop.uploadFolder}")
     private String UPLOAD_FOLDER;
 
+    private String sss;
+
     /**
      * 上传单个文件
      */
@@ -57,10 +59,10 @@ public class UploadController {
             //文件写入指定路径
             Files.write(path, bytes);
             System.out.println("-----------------");
-            return "文件上传成功";
+            return "上传成功";
 
         } catch (IOException e) {
-            return "文件上传失败";
+            return "上传失败";
         }
     }
     /**
