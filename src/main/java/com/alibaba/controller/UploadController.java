@@ -31,6 +31,9 @@ import java.util.UUID;
 @RestController
 public class UploadController {
 
+    private String s2;
+    private String s3;
+
     @Value("${prop.uploadFolder}")
     private String UPLOAD_FOLDER;
 
