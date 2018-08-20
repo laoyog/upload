@@ -31,13 +31,8 @@ import java.util.UUID;
 @RestController
 public class UploadController {
 
-    private String s2;
-    private String s3;
-
     @Value("${prop.uploadFolder}")
     private String UPLOAD_FOLDER;
-
-    private String sss;
 
     /**
      * 上传单个文件
@@ -61,11 +56,10 @@ public class UploadController {
             }
             //文件写入指定路径
             Files.write(path, bytes);
-            System.out.println("-----------------");
-            return "上传成功";
+            return "上传文件成功";
 
         } catch (IOException e) {
-            return "上传失败";
+            return "上传文件失败";
         }
     }
     /**
